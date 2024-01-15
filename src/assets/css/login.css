@@ -1,0 +1,48 @@
+body{
+    overflow: hidden;
+}
+.loginPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginImage{
+    width: 53%;
+    flex-grow: 1;
+}
+.loginForm{
+    width: 45%;
+    flex-grow: 1;
+    padding: 30px;
+    margin: 0 20px;
+    box-shadow: 0 0 5px 5px #eaeaea;
+}
+.loginForm h4{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+.loginForm input{
+    border: 0;
+    border-bottom: 1px solid #000;
+    outline: none;
+    border-radius: 0;
+}
+.loginForm input:focus{
+    outline: none;   
+    box-shadow: none !important;
+    border-color: #000;
+}
+.loginForm .btn{
+    width: 120px;
+}
+.loginForm .logoImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.loginForm.register .logoImg{
+    right: 0;
+    left: unset;
+}
