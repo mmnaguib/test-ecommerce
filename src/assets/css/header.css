@@ -1,0 +1,31 @@
+.userDropDown .btn-secondary{
+    border-radius: 0;
+}
+.userDropDown .dropdown-menu.show{text-align: center;}
+
+.header {
+    padding: 10px;
+    background-color: #1aa19b;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .links{
+    display: flex;
+}
+.header .links li{
+    margin-left: 10px;
+}
+.header .links li:last-of-type{
+    margin-left: 0;
+}
+.header .links a{
+    color: #fff;
+}
+.header .links a.active{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 1px;
+
+}

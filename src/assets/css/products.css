@@ -1,0 +1,31 @@
+.productsList{
+    padding: 25px;
+}
+.variationTable{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.variationTable th,
+.variationTable td{
+    border: 1px solid #eaeaea;
+    padding: 5px;
+}
+.productDesc{
+    width: 70%;
+    word-break: break-word;
+}
+.images {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.images img {
+    border: 1px solid #f69322;
+    margin-bottom: 10px;
+}
+.images img:last-of-type{
+    margin-bottom: 0;
+}
