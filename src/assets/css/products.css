@@ -11,10 +11,10 @@
     border: 1px solid #eaeaea;
     padding: 5px;
 }
-.productDesc{
+/* .productDesc{
     width: 70%;
     word-break: break-word;
-}
+} */
 .images {
     position: absolute;
     top: 10px;
@@ -28,4 +28,10 @@
 }
 .images img:last-of-type{
     margin-bottom: 0;
+}
+.modal-header .btn-close{
+    margin-left: 0;
+}
+.card{
+    margin-bottom: 30px;
 }

@@ -16,8 +16,17 @@ export const getProducts = createAsyncThunk('product/getProducts', async () => {
             return 'An error occurred during register.';
         }
       }
-)
-
+);
+export const createProduct = createAsyncThunk('product/createProduct',
+    async (credentials: {name: string, description: string, brand: string, category_id: number, color_id: number, size_id: number, price: number, stock: number }, { rejectWithValue }) => {
+        try {
+        const response = await axios.post('http://127.0.0.1:8000/api/addProduct', credentials);
+        return response.data;
+        } catch (error: any) {
+            return rejectWithValue(error);
+        }
+    }
+    );
 const ProductSlice = createSlice({
     name: 'product',
     initialState,
@@ -31,6 +40,19 @@ const ProductSlice = createSlice({
             state.products = action.payload;
         })
         .addCase(getProducts.rejected, (state, action) => {
+            state.loading= true
+            state.error= action.error.message ? action.error.message : '';
+        })
+
+        .addCase(createProduct.pending, (state) => {
+            state.loading= true
+        })
+        .addCase(createProduct.fulfilled, (state, action) => {
+            state.loading= false;
+            state.products.push(action.payload);
+            console.log(action);
+        })
+        .addCase(createProduct.rejected, (state, action) => {
             state.loading= true
             state.error= action.error.message ? action.error.message : '';
         })

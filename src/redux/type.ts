@@ -6,12 +6,13 @@ export interface loginState {
     token?: null | boolean
 }
 export interface variations {
-        color: {color_name: string},
-        size: {size_name: string},
-        product_id: number,
-        stock: number,
-        quantity_sold: number,
-    }
+    id: number,
+    color: {color_name: string},
+    size: {size_name: string},
+    product_id: number,
+    stock: number,
+    quantity_sold: number,
+}
 export interface productState {
     id: number,
     name : string,
@@ -23,6 +24,23 @@ export interface productState {
     images: {url: string}[],
 }
 
+export interface categoryState {
+    id: number,
+    name : string,
+    description : string,
+}
+export interface categoryType {
+    categories: categoryState[],
+    loading: boolean,
+    error: null | string,
+}
+export interface sizeType {
+    id?: number,
+    size_name : string,
+}export interface colorType {
+    id?: number,
+    color_name : string,
+}
 export interface productType {
     products: productState[],
     loading: boolean,
